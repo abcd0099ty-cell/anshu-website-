@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ANSHU's WEBSITE</title>
+ <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="logo">ANSHU's WEBSITE</div>
+ <div class="one">
+    <a href="index.html">HOME</a>
+    <a href="about.html">ABOUT US</a>
+   <a href="contact.html">CONTACT US</a>
+    <a href="form.html">JOIN US</a>
+ </div> 
+<div id="datetime"></div>
+  <script>
+function updateDateTime() {
+    const now = new Date();
+
+    const days = [
+        "Sunday", "Monday", "Tuesday",
+        "Wednesday", "Thursday", "Friday", "Saturday"
+    ];
+
+    const day = days[now.getDay()];
+
+    const date = now.getDate() + "/" +
+                 (now.getMonth() + 1) + "/" +
+                 now.getFullYear();
+
+    const time = now.toLocaleTimeString();
+
+    document.getElementById("datetime").innerHTML =
+    "<b>Day :</b> " + day + "<br>" +
+    "<b>Date :</b> " + date + "<br>" +
+    "<b>Time :</b> " + time;
+}
+
+setInterval(updateDateTime, 1000);
+updateDateTime();
+  </script>
+  <footer>
+  <p class="footer">© 2026 ANSHU's WEBSITE. All Rights Reserved.</p>
+</footer>
+</body>
+    </html>
